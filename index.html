@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Studio Designer | Fotografia de Casamento e Eventos</title>
+  
+  <!-- Fontes do Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Ícones (usaremos apenas para WhatsApp se quiser depois) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="Studio Designer" />
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#portfolio-preview">Portfólio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero com Carrossel Automático -->
+  <section class="hero-carousel">
+    <div class="hero-slides">
+      <div class="hero-slide" style="background-image: url('assets/images/hero/exemplo-fotografia.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/exemplo-fotografia.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/exemplo-fotografia.jpg');"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero/exemplo-fotografia.jpg');"></div>
+    </div>
+  </section>
+
+  <!-- Mostruário de Fotos -->
+  <section class="portfolio-preview" id="portfolio-preview">
+    <div class="container">
+      <h2 class="section-title">Nossos Momentos</h2>
+      <div class="gallery-grid">
+        <img src="assets/images/preview/casamento-thumb.jpg" alt="Casamento">
+        <img src="assets/images/preview/batizado-thumb.jpg" alt="Batizado">
+        <img src="assets/images/preview/escolinha-thumb.jpg" alt="Escolinha">
+        <img src="assets/images/preview/comunhao-thumb.jpg" alt="Comunhão">
+      </div>
+      <a href="portfolio.html" class="btn btn-primary">Ver Galeria Completa</a>
+    </div>
+  </section>
+
+  <!-- CTA WhatsApp -->
+  <section class="cta-whatsapp" id="contato">
+    <div class="container">
+      <h2>Interessado em registrar seu momento especial?</h2>
+      <p>Fale diretamente com o Studio Designer pelo WhatsApp!</p>
+      <!-- 🔁 Substitua o número abaixo pelo real do seu pai (com código do país, sem espaços ou parênteses) -->
+      <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20um%20orçamento." 
+         class="btn btn-primary" target="_blank">
+        Entrar em contato
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><img src="assets/images/whatsapp.png" alt="" class="social"><a href="https://wa.me/5519981535581" target="_blank">(11) 98153-5581</a></p>
+      <p><img src="assets/images/instagram.png" alt="" class="social"><a href="https://instagram.com/studiodesignerfotografia" target="_blank">@studiodesignerfotografia</a></p>
+      <p>&copy; 2024 Studio Designer. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
