@@ -1,0 +1,115 @@
+<!-- portfolio.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio - Studio Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .back-link {
+      display: inline-block;
+      margin: 1.5rem 0;
+      color: var(--laranja);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    .portfolio-categories {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    .portfolio-categories button {
+      padding: 0.5rem 1.2rem;
+      background: var(--off-white);
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family: var(--font-corpo);
+    }
+    .portfolio-categories button.active,
+    .portfolio-categories button:hover {
+      background: var(--laranja);
+      color: white;
+      border-color: var(--laranja);
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 2rem;
+    }
+    @media (min-width: 768px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .portfolio-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .portfolio-grid img:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Voltar para Home</a>
+    <h1 class="section-title" style="text-align: center;">Portfólio</h1>
+
+    <div class="portfolio-categories">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="casamento">Casamentos</button>
+      <button class="filter-btn" data-filter="batizado">Batizados</button>
+      <button class="filter-btn" data-filter="escolinha">Escolinhas</button>
+      <button class="filter-btn" data-filter="comunhao">Comunhão</button>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Exemplo de fotos – substitua pelos caminhos reais -->
+      <img src="assets/images/portfolio/casamento1.jpg" alt="Casamento" data-category="casamento">
+      <img src="assets/images/portfolio/batizado1.jpg" alt="Batizado" data-category="batizado">
+      <img src="assets/images/portfolio/escolinha1.jpg" alt="Escolinha" data-category="escolinha">
+      <img src="assets/images/portfolio/comunhao1.jpg" alt="Comunhão" data-category="comunhao">
+      <img src="assets/images/portfolio/casamento2.jpg" alt="Casamento" data-category="casamento">
+      <img src="assets/images/portfolio/batizado2.jpg" alt="Batizado" data-category="batizado">
+      <!-- Adicione mais fotos conforme necessário -->
+    </div>
+  </div>
+
+  <script>
+    // Filtro simples por categoria
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        // Atualiza botão ativo
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.dataset.filter;
+        document.querySelectorAll('.portfolio-grid img').forEach(img => {
+          if (filter === 'all' || img.dataset.category === filter) {
+            img.style.display = 'block';
+          } else {
+            img.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
