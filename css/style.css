@@ -163,7 +163,7 @@ body {
     transform: none;
     top: auto;
     left: auto;
-    margin-left: auto;
+    margin-left: auto; /* Empurra os ícones para a direita */
   }
 
   .hamburger {
@@ -178,7 +178,7 @@ body {
     height: auto;
     flex-direction: row;
     align-items: center;
-    margin-left: 2rem; /* Empurra o menu um pouco para a direita */
+    margin-left: 2rem; /* Joga o menu um pouco para a direita */
   }
 
   .nav-menu a {
