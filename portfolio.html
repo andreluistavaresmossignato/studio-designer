@@ -1,23 +1,45 @@
-<!-- portfolio.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfólio - Studio Designer</title>
+  
+  <!-- Fontes do Google -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- Estilos específicos do portfólio -->
   <style>
+    .portfolio-hero {
+      padding: 6rem 0 2rem;
+      text-align: center;
+    }
+
+    .portfolio-hero h1 {
+      font-family: var(--font-titulo);
+      font-size: 2.4rem;
+      color: var(--preto);
+    }
+
     .back-link {
       display: inline-block;
-      margin: 1.5rem 0;
+      margin: 1rem 0;
       color: var(--laranja);
       text-decoration: none;
       font-weight: 600;
+      font-family: var(--font-corpo);
     }
+
     .back-link:hover {
       text-decoration: underline;
     }
+
     .portfolio-categories {
       display: flex;
       justify-content: center;
@@ -25,6 +47,7 @@
       margin: 2rem 0;
       flex-wrap: wrap;
     }
+
     .portfolio-categories button {
       padding: 0.5rem 1.2rem;
       background: var(--off-white);
@@ -32,46 +55,98 @@
       border-radius: 20px;
       cursor: pointer;
       font-family: var(--font-corpo);
+      transition: all 0.3s;
     }
+
     .portfolio-categories button.active,
     .portfolio-categories button:hover {
       background: var(--laranja);
       color: white;
       border-color: var(--laranja);
     }
+
+    .portfolio-content {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      padding: 0 1.5rem;
+    }
+
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
-      margin-top: 2rem;
     }
+
     @media (min-width: 768px) {
+      .portfolio-hero h1 {
+        font-size: 2.8rem;
+      }
+
       .portfolio-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
     @media (min-width: 1024px) {
       .portfolio-grid {
         grid-template-columns: repeat(4, 1fr);
       }
     }
+
     .portfolio-grid img {
       width: 100%;
       height: 220px;
       object-fit: cover;
       border-radius: 8px;
       transition: transform 0.3s;
+      cursor: pointer;
     }
+
     .portfolio-grid img:hover {
       transform: scale(1.02);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <a href="index.html" class="back-link">← Voltar para Home</a>
-    <h1 class="section-title" style="text-align: center;">Portfólio</h1>
 
+  <!-- Navbar (igual às outras páginas) -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <div class="social-icons">
+        <a href="https://wa.me/5519981535581" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/studiodesignerfotografia" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <div class="logo">
+        <img src="assets/images/logo.jpg" alt="Studio Designer" />
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo do Portfólio -->
+  <section class="portfolio-hero">
+    <h1>Portfólio</h1>
+  </section>
+
+  <section class="portfolio-content">
     <div class="portfolio-categories">
       <button class="filter-btn active" data-filter="all">Todos</button>
       <button class="filter-btn" data-filter="casamento">Casamentos</button>
@@ -81,7 +156,7 @@
     </div>
 
     <div class="portfolio-grid">
-      <!-- Exemplo de fotos – substitua pelos caminhos reais -->
+      <!-- Substitua pelos caminhos reais das fotos -->
       <img src="assets/images/portfolio/casamento1.jpg" alt="Casamento" data-category="casamento">
       <img src="assets/images/portfolio/batizado1.jpg" alt="Batizado" data-category="batizado">
       <img src="assets/images/portfolio/escolinha1.jpg" alt="Escolinha" data-category="escolinha">
@@ -90,23 +165,35 @@
       <img src="assets/images/portfolio/batizado2.jpg" alt="Batizado" data-category="batizado">
       <!-- Adicione mais fotos conforme necessário -->
     </div>
-  </div>
+  </section>
 
+  <!-- Footer (igual às outras páginas) -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <i class="fab fa-whatsapp social-icon"></i>
+        <a href="https://wa.me/5519981535581" target="_blank">(19) 98153-5581</a>
+      </p>
+      <p>
+        <i class="fab fa-instagram social-icon"></i>
+        <a href="https://instagram.com/studiodesignerfotografia" target="_blank">@studiodesignerfotografia</a>
+      </p>
+      <p>&copy; 2024 Studio Designer. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
   <script>
-    // Filtro simples por categoria
+    // Filtro por categoria
     document.querySelectorAll('.filter-btn').forEach(button => {
       button.addEventListener('click', () => {
-        // Atualiza botão ativo
         document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
         const filter = button.dataset.filter;
         document.querySelectorAll('.portfolio-grid img').forEach(img => {
-          if (filter === 'all' || img.dataset.category === filter) {
-            img.style.display = 'block';
-          } else {
-            img.style.display = 'none';
-          }
+          img.style.display = (filter === 'all' || img.dataset.category === filter) ? 'block' : 'none';
         });
       });
     });

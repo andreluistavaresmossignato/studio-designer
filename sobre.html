@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre - Studio Designer</title>
+  
+  <!-- Fontes do Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .about-hero {
+      padding: 6rem 0 3rem;
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      font-family: var(--font-titulo);
+      font-size: 2.4rem;
+      color: var(--preto);
+    }
+
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      padding: 0 1.5rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .about-text {
+      font-family: var(--font-corpo);
+      line-height: 1.8;
+      color: var(--cinza-texto);
+    }
+
+    .about-text h2 {
+      font-family: var(--font-titulo);
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      color: var(--preto);
+    }
+
+    .about-text p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    .btn-services {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: var(--laranja);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-family: var(--font-corpo);
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 1.5rem;
+    }
+
+    .btn-services:hover {
+      background: #e55a2b;
+      transform: translateY(-2px);
+    }
+
+    @media (min-width: 768px) {
+      .about-hero h1 {
+        font-size: 3rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr 1.4fr;
+        gap: 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <div class="social-icons">
+        <a href="https://wa.me/5519981535581" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/studiodesignerfotografia" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <div class="logo">
+        <img src="assets/images/logo.jpg" alt="Studio Designer" />
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <h1>Nossa História</h1>
+  </section>
+
+  <!-- Conteúdo -->
+  <section class="about-content">
+    <div class="about-grid">
+      <!-- Foto do seu pai -->
+      <div class="about-photo">
+        <img src="assets/images/about/foto.jpg" alt="Fotógrafo do Studio Designer">
+      </div>
+
+      <!-- Texto sobre: OBS: MUDAR ESSE TEXTO MAIS TARDE!!! -->
+      <div class="about-text">
+        <h2>Studio Designer: mais que fotos, memórias</h2>
+        <p>
+          Fundado em <strong>2008</strong>, o Studio Designer nasceu do sonho de <strong>Roberto Silva</strong> (seu pai) em eternizar os momentos mais importantes da vida das pessoas. 
+          Com uma câmera na mão e o coração cheio de paixão, ele começou registrando casamentos de amigos e, aos poucos, transformou seu olhar sensível em uma referência na região.
+        </p>
+        <p>
+          Hoje, com mais de <strong>15 anos de experiência</strong>, o Studio Designer é sinônimo de entrega emocional, cuidado técnico e presença discreta nos eventos. 
+          Roberto acredita que cada clique deve contar uma história — não apenas mostrar um rosto, mas capturar um sentimento.
+        </p>
+        <p>
+          Atendemos com carinho casamentos, batizados, comunhões, ensaios escolares e ensaios familiares, sempre com um olhar personalizado para cada cliente.
+        </p>
+        <a href="servicos.html" class="btn-services">Conheça nossos serviços →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <i class="fab fa-whatsapp social-icon"></i>
+        <a href="https://wa.me/5519981535581" target="_blank">(19) 98153-5581</a>
+      </p>
+      <p>
+        <i class="fab fa-instagram social-icon"></i>
+        <a href="https://instagram.com/studiodesignerfotografia" target="_blank">@studiodesignerfotografia</a>
+      </p>
+      <p>&copy; 2024 Studio Designer. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

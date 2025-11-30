@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - Studio Designer</title>
+  
+  <!-- Fontes do Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .contact-hero {
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: var(--off-white);
+      padding: 0 1.5rem;
+    }
+
+    .contact-hero h1 {
+      font-family: var(--font-titulo);
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: var(--preto);
+    }
+
+    .contact-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: var(--cinza-texto);
+    }
+
+    .contact-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .card-image {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.8rem 1.5rem;
+    }
+
+    .card-content h3 {
+      font-family: var(--font-titulo);
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--preto);
+    }
+
+    .btn-contact {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      background: var(--laranja);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-family: var(--font-corpo);
+      transition: background 0.3s;
+      margin-top: 1rem;
+    }
+
+    .btn-contact:hover {
+      background: #e55a2b;
+      transform: translateY(-2px);
+    }
+
+    .btn-contact i {
+      margin-right: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .contact-hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .contact-hero p {
+        font-size: 1.4rem;
+      }
+
+      .contact-cards {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <div class="social-icons">
+        <a href="https://wa.me/5519981535581" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/studiodesignerfotografia" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <div class="logo">
+        <img src="assets/images/logo.jpg" alt="Studio Designer" />
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero da página de contato -->
+  <section class="contact-hero">
+    <div>
+      <h1>Interessado em registrar seu momento especial?</h1>
+      <p>Fale diretamente conosco pelo WhatsApp ou nos acompanhe no Instagram para ver nossos últimos trabalhos!</p>
+    </div>
+  </section>
+
+  <!-- Cartões de contato -->
+  <section class="contact-cards">
+    <!-- WhatsApp -->
+    <div class="contact-card">
+      <img src="assets/images/contact/whatsapp-bg.jpg" alt="Converse conosco pelo WhatsApp" class="card-image">
+      <div class="card-content">
+        <h3>Orçamento Rápido</h3>
+        <p>Envie uma mensagem com o tipo de evento, data e local. Responderemos em até 24h!</p>
+        <a href="https://wa.me/5519981535581?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20meu%20evento." 
+           class="btn-contact" target="_blank">
+          <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Instagram -->
+    <div class="contact-card">
+      <img src="assets/images/contact/instagram-feed.jpg" alt="Siga-nos no Instagram" class="card-image">
+      <div class="card-content">
+        <h3>Acompanhe no Instagram</h3>
+        <p>Veja nossos últimos casamentos, batizados e ensaios escolares em tempo real.</p>
+        <a href="https://instagram.com/studiodesignerfotografia" 
+           class="btn-contact" target="_blank">
+          <i class="fab fa-instagram"></i> Ver Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <i class="fab fa-whatsapp social-icon"></i>
+        <a href="https://wa.me/5519981535581" target="_blank">(19) 98153-5581</a>
+      </p>
+      <p>
+        <i class="fab fa-instagram social-icon"></i>
+        <a href="https://instagram.com/studiodesignerfotografia" target="_blank">@studiodesignerfotografia</a>
+      </p>
+      <p>&copy; 2024 Studio Designer. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

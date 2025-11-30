@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Serviços - Studio Designer</title>
+  
+  <!-- Fontes do Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .services-hero {
+      padding: 6rem 0 3rem;
+      text-align: center;
+    }
+
+    .services-hero h1 {
+      font-family: var(--font-titulo);
+      font-size: 2.4rem;
+      color: var(--preto);
+    }
+
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-header {
+      background: var(--off-white);
+      padding: 1.4rem 1.5rem;
+      text-align: center;
+    }
+
+    .service-header h3 {
+      font-family: var(--font-titulo);
+      font-size: 1.6rem;
+      color: var(--preto);
+      margin: 0;
+    }
+
+    .service-body {
+      padding: 1.8rem 1.5rem;
+      flex: 1;
+    }
+
+    .service-body p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .service-includes {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .service-includes h4 {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--preto);
+    }
+
+    .service-includes ul {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+
+    .service-includes li {
+      margin-bottom: 0.3rem;
+    }
+
+    .cta-whatsapp-final {
+      text-align: center;
+      padding: 3rem 1.5rem 5rem;
+      background: var(--off-white);
+    }
+
+    .cta-whatsapp-final h2 {
+      font-family: var(--font-titulo);
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      color: var(--preto);
+    }
+
+    .cta-whatsapp-final p {
+      max-width: 600px;
+      margin: 0 auto 1.8rem;
+      font-size: 1.1rem;
+      color: var(--cinza-texto);
+    }
+
+    .btn-whatsapp-big {
+      display: inline-block;
+      padding: 1rem 2.4rem;
+      background: var(--laranja);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-family: var(--font-corpo);
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+    }
+
+    .btn-whatsapp-big:hover {
+      background: #e55a2b;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(255, 107, 53, 0.4);
+    }
+
+    @media (min-width: 768px) {
+      .services-hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <div class="social-icons">
+        <a href="https://wa.me/5519981535581" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/studiodesignerfotografia" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <div class="logo">
+        <img src="assets/images/logo.jpg" alt="Studio Designer" />
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="services-hero">
+    <h1>Nossos Serviços</h1>
+  </section>
+
+  <!-- Serviços -->
+  <section class="services-grid">
+    <!-- Casamentos -->
+    <div class="service-card">
+      <div class="service-header">
+        <h3>Casamentos</h3>
+      </div>
+      <div class="service-body">
+        <p>Cada casamento é único. Estamos ao seu lado desde o pré-wedding até a última dança da noite, capturando emoções reais com sensibilidade e técnica.</p>
+        <div class="service-includes">
+          <h4>O que inclui:</h4>
+          <ul>
+            <li>Ensaio pré-casamento (opcional)</li>
+            <li>Cobertura completa do dia (até 10h)</li>
+            <li>Álbum digital em alta resolução</li>
+            <li>Entrega em até 15 dias úteis</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Batizados e Comunhões -->
+    <div class="service-card">
+      <div class="service-header">
+        <h3>Batizados & Comunhões</h3>
+      </div>
+      <div class="service-body">
+        <p>Momentos de fé e família merecem um registro delicado. Estamos lá para eternizar cada detalhe com respeito e carinho.</p>
+        <div class="service-includes">
+          <h4>O que inclui:</h4>
+          <ul>
+            <li>Presença durante toda a cerimônia</li>
+            <li>Sessão de retratos com família após</li>
+            <li>Galeria online privativa</li>
+            <li>Álbum digital em até 10 dias</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ensaio Escolar -->
+    <div class="service-card">
+      <div class="service-header">
+        <h3>Ensaio Escolar</h3>
+      </div>
+      <div class="service-body">
+        <p>Trabalhamos com escolas e creches para fotografar cada criança com atenção individual. Oferecemos kits impressos e digitais para as famílias.</p>
+        <div class="service-includes">
+          <h4>O que inclui:</h4>
+          <ul>
+            <li>Organização por turma e horários</li>
+            <li>10 poses por aluno (escolha online)</li>
+            <li>Opção de kits com moldura e fotos digitais</li>
+            <li>Entrega em 7 dias úteis</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Retratos Familiares -->
+    <div class="service-card">
+      <div class="service-header">
+        <h3>Retratos Familiares</h3>
+      </div>
+      <div class="service-body">
+        <p>Gravidez, recém-nascidos, aniversários ou simplesmente “hoje estamos juntos”. Criamos recordações que sua família vai guardar para sempre.</p>
+        <div class="service-includes">
+          <h4>O que inclui:</h4>
+          <ul>
+            <li>Ensaio de 1h em local de sua escolha</li>
+            <li>Seleção de 30 fotos editadas</li>
+            <li>Álbum digital + opção de impressão</li>
+            <li>Agendamento flexível (inclui finais de semana)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta-whatsapp-final">
+    <h2>Pronto para registrar seu momento?</h2>
+    <p>Envie uma mensagem com o tipo de evento, data e local. Reservamos sua data com um pequeno sinal!</p>
+    <a href="https://wa.me/5519981535581?text=Olá!%20Gostaria%20de%20reservar%20minha%20data%20para%20um%20evento." 
+       class="btn-whatsapp-big" target="_blank">
+      <i class="fab fa-whatsapp"></i> Quero reservar minha data!
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <i class="fab fa-whatsapp social-icon"></i>
+        <a href="https://wa.me/5519981535581" target="_blank">(19) 98153-5581</a>
+      </p>
+      <p>
+        <i class="fab fa-instagram social-icon"></i>
+        <a href="https://instagram.com/studiodesignerfotografia" target="_blank">@studiodesignerfotografia</a>
+      </p>
+      <p>&copy; 2024 Studio Designer. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
