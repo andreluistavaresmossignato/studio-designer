@@ -163,20 +163,32 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.95);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
   }
 
   .lightbox.active {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
   }
 
   .lightbox-content {
     position: relative;
     max-width: 95vw;
     max-height: 90vh;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+
+  .lightbox.active .lightbox-content {
+    opacity: 1;
+    transform: scale(1);
   }
 
   .lightbox-content img {
@@ -184,55 +196,59 @@
     max-height: 90vh;
     border: 3px solid white;
     border-radius: 4px;
+    display: block;
   }
 
-  .lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: white;
-    font-size: 2.2rem;
-    cursor: pointer;
-    background: rgba(0,0,0,0.4);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
+  .lightbox-close,
   .lightbox-nav {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     color: white;
     font-size: 2.5rem;
     cursor: pointer;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.25s ease, transform 0.2s ease;
+  }
+
+  .lightbox-close {
+    top: 20px;
+    right: 20px;
+    font-size: 2.2rem;
+    width: 44px;
+    height: 44px;
   }
 
   .lightbox-nav.prev {
     left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .lightbox-nav.next {
     right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Hover suave */
+  .lightbox-close:hover,
+  .lightbox-nav:hover {
+    background: rgba(255, 107, 53, 0.8);
+    transform: scale(1.05);
+  }
+
+  .lightbox-nav:hover {
+    transform: translateY(-50%) scale(1.05);
   }
 
   @media (max-width: 767px) {
+    .lightbox-close,
     .lightbox-nav {
-      font-size: 1.8rem;
-      width: 40px;
-      height: 40px;
-    }
-    .lightbox-close {
       font-size: 1.8rem;
       width: 40px;
       height: 40px;

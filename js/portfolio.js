@@ -40,20 +40,54 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target === lightbox) closeLightbox();
     });
   
-    // Navegação
-    prevBtn.addEventListener('click', () => {
+    // Função para trocar de imagem com fade
+    function showImage(imgElement) {
+      const content = document.querySelector('.lightbox-content');
+      content.style.opacity = 0;
+      content.style.transform = 'scale(0.98)';
+      
+      setTimeout(() => {
+        lightboxImg.src = imgElement.src;
+        lightboxImg.alt = imgElement.alt;
+        content.style.opacity = 1;
+        content.style.transform = 'scale(1)';
+      }, 200);
+    }
+
+  // Navegação
+  prevBtn.addEventListener('click', () => {
+    updateVisibleImages();
+    if (visibleImages.length === 0) return;
+    currentIndex = (currentIndex - 1 + visibleImages.length) % visibleImages.length;
+    showImage(visibleImages[currentIndex]);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    updateVisibleImages();
+    if (visibleImages.length === 0) return;
+    currentIndex = (currentIndex + 1) % visibleImages.length;
+    showImage(visibleImages[currentIndex]);
+  });
+
+  // Abrir lightbox (com animação)
+  images.forEach(img => {
+    img.addEventListener('click', () => {
       updateVisibleImages();
-      currentIndex = (currentIndex - 1 + visibleImages.length) % visibleImages.length;
-      lightboxImg.src = visibleImages[currentIndex].src;
-      lightboxImg.alt = visibleImages[currentIndex].alt;
+      const visibleIndex = visibleImages.indexOf(img);
+      if (visibleIndex === -1) return;
+
+      currentIndex = visibleIndex;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Força repaint para garantir animação
+      setTimeout(() => {
+        const content = document.querySelector('.lightbox-content');
+        content.style.opacity = 1;
+        content.style.transform = 'scale(1)';
+      }, 10);
     });
-  
-    nextBtn.addEventListener('click', () => {
-      updateVisibleImages();
-      currentIndex = (currentIndex + 1) % visibleImages.length;
-      lightboxImg.src = visibleImages[currentIndex].src;
-      lightboxImg.alt = visibleImages[currentIndex].alt;
-    });
+  });
   
     // Teclado
     document.addEventListener('keydown', (e) => {
