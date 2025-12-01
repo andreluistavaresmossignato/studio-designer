@@ -1,4 +1,5 @@
 // js/main.js
+// Efeitos aplicados para todas as páginas
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
