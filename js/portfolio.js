@@ -96,4 +96,4 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'ArrowLeft') prevBtn.click();
       if (e.key === 'ArrowRight') nextBtn.click();
     });
-  });
+});
