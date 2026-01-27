@@ -246,6 +246,32 @@
     transform: translateY(-50%) scale(1.05);
   }
 
+  .portfolio-subtitle {
+    font-family: var(--font-corpo);
+    font-size: 1.1rem;
+    color: var(--cinza-texto);
+    margin-top: 0.8rem;
+  }
+
+  .portfolio-hint {
+    font-size: 0.95rem;
+    color: #777;
+    font-style: italic;
+  }
+
+  .blog-cta {
+    text-align: center;
+    padding: 3rem 0 4rem;
+    background-color: var(--off-white);
+  }
+
+  .blog-cta p {
+    font-family: var(--font-titulo);
+    font-size: 1.6rem;
+    color: var(--preto);
+    margin-bottom: 1.5rem;
+  }
+
   @media (max-width: 767px) {
     .lightbox-close,
     .lightbox-nav {
@@ -293,6 +319,7 @@
   <!-- Conteúdo do Portfólio -->
   <section class="portfolio-hero">
     <h1>Portfólio</h1>
+    <p class="portfolio-subtitle">Alguns dos nossos trabalhos <span class="portfolio-hint">(Clique na foto para visualizar)</span></p>
   </section>
 
   <section class="portfolio-content">
@@ -313,6 +340,14 @@
       <img src="assets/images/portfolio/casamento2.jpg" alt="Casamento" data-category="casamento">
       <img src="assets/images/portfolio/batizado2.jpg" alt="Batizado" data-category="batizado">
       <!-- Adicione mais fotos conforme necessário -->
+    </div>
+  </section>
+
+  <!-- Seção do Blog -->
+  <section class="blog-cta">
+    <div class="container">
+      <p>Acompanhe mais dos nossos serviços através do nosso blog</p>
+      <a href="https://studiodesignerfotografia.blogspot.com/" target="_blank" class="btn btn-primary">Acessar blog</a>
     </div>
   </section>
 
